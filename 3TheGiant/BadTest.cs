@@ -6,7 +6,7 @@ namespace ImprovingOurTestTalk._3TheGiant;
 public class BadTest
 {
     [Fact]
-    public void CreatePeople()
+    public void Should_create_people()
     {
         Assert.Throws<ArgumentNullException>(() => new People(null, "email"));
         Assert.Throws<ArgumentNullException>(() => new People("name", null));

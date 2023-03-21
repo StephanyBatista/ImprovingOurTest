@@ -1,4 +1,4 @@
-using ImprovingOurTestTalk._2ExcessiveSetup.Dependencies;
+namespace ImprovingOurTestTalk._2ExcessiveSetup.Dependencies;
 
 public class PeopleCreationService
 {
