@@ -18,9 +18,3 @@ public class BankService
         _accountService.WithDraw(accountNumber, amount);
     }
 }
-
-public interface IAccountService
-{
-    decimal GetBalance(string accountNumber);
-    void WithDraw(string accountNumber, decimal amount);
-}

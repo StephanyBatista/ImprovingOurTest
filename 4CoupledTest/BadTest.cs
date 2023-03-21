@@ -11,7 +11,8 @@ public class BadTest
         var accountService = new Mock<IAccountService>();
         var bankService = new BankService(accountService.Object);
         
-        Assert.Throws<Exception>(() => bankService.Withdraw("123", 100));
+        var exception = Assert.Throws<Exception>(() => bankService.Withdraw("123", 100));
+        Assert.Equal("Insufficient funds", exception.Message);
     }
     
     [Fact]
