@@ -6,7 +6,7 @@ namespace ImprovingOurTestTalk._4CoupledTest;
 public class BadTest
 {
     [Fact]
-    public void Should_Throw_When_Insufficient_Funds()
+    public void Should_throw_exception_when_insufficient_funds()
     {
         var accountService = new Mock<IAccountService>();
         var bankService = new BankService(accountService.Object);
@@ -16,7 +16,7 @@ public class BadTest
     }
     
     [Fact]
-    public void Should_Withdraw_When_Enough_Funds()
+    public void Should_withdraw_when_enough_funds()
     {
         var accountService = new Mock<IAccountService>();
         accountService.Setup(x => x.GetBalance("123")).Returns(100);
